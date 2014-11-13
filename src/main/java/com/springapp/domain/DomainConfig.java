@@ -19,9 +19,4 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class DomainConfig {
 
-    @Bean
-    public PlatformTransactionManager transactionManager(DataSource dataSource) {
-        return new DataSourceTransactionManager(dataSource);
-    }
-
 }
