@@ -1,4 +1,4 @@
-package com.springapp.mvc;
+package com.springapp.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,26 +16,13 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.springapp.app")
-public class MvcConfig extends WebMvcConfigurerAdapter {
-
-    @Override
-    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/js/**").addResourceLocations("/WEB-INF/resources/js/");
-        registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/resources/css/");
-        registry.addResourceHandler("/images/**").addResourceLocations("/WEB-INF/resources/images/");
-    }
-
-    @Override
-    public Validator getValidator() {
-        final LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();
-        return validator;
-    }
+public class AppServletConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public ViewResolver viewResolver() {
         UrlBasedViewResolver resolver = new UrlBasedViewResolver();
         resolver.setViewClass(JstlView.class);
-        resolver.setPrefix("/WEB-INF/pages/");
+        resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         return resolver;
     }

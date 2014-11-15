@@ -1,6 +1,6 @@
-package com.springapp.web;
+package com.springapp;
 
-import com.springapp.mvc.MvcConfig;
+import com.springapp.app.AppServletConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -11,14 +11,14 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
-                WebApplicationConfig.class
+                ApplicationConfig.class
         };
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{
-                MvcConfig.class
+                AppServletConfig.class
         };
     }
 

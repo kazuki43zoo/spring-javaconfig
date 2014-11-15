@@ -9,11 +9,12 @@ import org.springframework.core.io.ClassPathResource;
 
 import javax.sql.DataSource;
 
-@Configuration
-@MapperScan(value = "com.springapp.domain.repository.todo", sqlSessionFactoryRef = "sqlSessionFactory1")
-public class InfraConfig {
 
-    @Bean(name = "sqlSessionFactory1")
+@Configuration
+@MapperScan(value = "com.springapp.domain.repository.todo2", sqlSessionFactoryRef = "sqlSessionFactory2")
+public class Infra2Config {
+
+    @Bean(name = "sqlSessionFactory2")
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);

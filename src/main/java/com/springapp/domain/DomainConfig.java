@@ -1,6 +1,7 @@
 package com.springapp.domain;
 
 import com.springapp.env.EnvConfig;
+import com.springapp.infra.Infra2Config;
 import com.springapp.infra.InfraConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,7 +16,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = "com.springapp.domain")
-@Import({EnvConfig.class, InfraConfig.class})
+@Import({EnvConfig.class, InfraConfig.class, Infra2Config.class})
 @EnableTransactionManagement
 public class DomainConfig {
 
