@@ -8,7 +8,7 @@
     <name>spring-javaconfig</name>
 
     <properties>
-        <spring.version>4.1.2.RELEASE</spring.version>
+        <spring.version>3.2.11.RELEASE</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis-spring.version>1.2.2</mybatis-spring.version>
     </properties>
