@@ -8,10 +8,21 @@
     <name>spring-javaconfig</name>
 
     <properties>
-        <spring.version>3.2.12.RELEASE</spring.version>
+        <spring.version>3.2.13.BUILD-SNAPSHOT</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis-spring.version>1.2.2</mybatis-spring.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>http://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
